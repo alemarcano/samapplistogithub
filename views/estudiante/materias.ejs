@@ -1,0 +1,36 @@
+<div class="container">
+        <h2>Materias del Alumno</h2>
+       
+        <a class="button" href="/"> Regresar </a>
+    
+        <table class="table table-hover">
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Cedula</th>
+            <th>Materia</th>
+            <th colspan="2" class="text-center">Acciones</th>
+            <% estudiantes.forEach( function(estudiante){ %>
+            <tr>
+                <td><%=estudiante.Nombres %></td>
+                <td><%=estudiante.Apellidos %></td>
+                <td><%=estudiante.Cedula %></td>
+                <td><%=estudiante.Materia %></td>
+                <td>
+                    <a href="/persona/show/<%=persona.id%>" class="btn btn-success btn-sm "> Ver Detalles</a>
+                </td>
+                <td>
+                    <form action="/persona/destroy/<%=persona.id%>" method="POST" accept-charset="utf-8">
+                        <input type="hidden" name="method" value="delete"/>
+                        <input type="submit" class="btn btn-sm btn-danger" value="Eliminar"/>
+                        <input type="hidden" name="_csrf" value="<%=_csrf%>"/>
+    
+                    </form>
+                        
+                
+                </td>
+            </tr>
+    
+        <%})%>
+    
+        </table>
+    </div>

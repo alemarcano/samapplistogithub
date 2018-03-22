@@ -1,0 +1,31 @@
+<div class='my-4'>
+    <div class="container text-center">
+        <table class="table white-text">
+            <tr>
+
+                <th>ID</th>
+                <th>Cedula</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Sexo</th>
+                <th>Carnet</th>
+                
+            </tr>
+
+            <% estudiantes.forEach(function(estudiante)){ %>
+                <tr>
+                    <td><%= estudiante.id %> </td>
+                    <td><%= estudiante.persona.cedula %> </td>
+                    <td><%= estudiante.persona.nombres %> </td>
+                    <td><%= estudiante.persona.apellidos %> </td>
+                    <td><%= estudiante.persona.sexo %> </td>
+                    <td><%= estudiante.persona.carnet %> </td>
+
+                </tr>
+
+
+            <% }) %>
+
+        </table>
+    </div>
+</div>

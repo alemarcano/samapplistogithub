@@ -1,0 +1,19 @@
+<div id="container">
+
+        <h1><%= 'Nombre: '+persona.nombres %></h1>
+        <hr>
+        <h1><%= 'Apellido: '+persona.apellidos %></h1>
+        <hr>
+        <h2><%= 'Cedula: '+persona.cedula %></h2>
+        <hr>
+    
+        <form action="/estudiante/new" method="POST">
+          <input type="hidden" value= "<%=persona.id %>" name="persona">
+          <input type="submit" class="btn btn-default" value= "Agregar estudiante" />
+        </form>
+        
+      
+        <div id="container">
+        <a class="button" class="btn btn-default" href="/persona"> Regresar </a>
+        </div>
+        

@@ -1,0 +1,14 @@
+
+<div id="container">
+    <form action="/estudiante/create" method="POST">
+      <h2> Agregar Carnet a  <%= persona.nombres+" "+persona.apellidos %></h2>
+    
+      <label>Carnet</label>
+      <input  type="hidden" name="persona" value="<%-persona.id %>"/>
+      <br>
+      <input type="text" name="carnet" class="form-control"  required>  <br />
+
+      <input type="submit" value="agregar Estudiante"/>
+
+    </form>
+</div>
